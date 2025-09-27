@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://bx6tpivfhxsr3"]
+
+[ext_resource type="Script" uid="uid://bo85683dyku1f" path="res://main.gd" id="1_jnavc"]
+
+[sub_resource type="Curve2D" id="Curve2D_ckofj"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -273, -50, -181, 2, 181, -2, 246, -257, 0, 0, 0, 0, 739, -45, 0, 0, 0, 0, 1078, -37, 0, 0, 0, 0, 1058, -538, 0, 0, 0, 0, 1493, -544, 0, 0, 0, 0, 1510, -279, -3.63, 4.84, 3.63, -4.84, 1765, -277)
+}
+point_count = 8
+
+[sub_resource type="TileSet" id="TileSet_0xr8s"]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_jnavc")
+
+[node name="Path2D" type="Path2D" parent="."]
+position = Vector2(0, 35)
+curve = SubResource("Curve2D_ckofj")
+
+[node name="TileMapLayer" type="TileMapLayer" parent="."]
+tile_set = SubResource("TileSet_0xr8s")
