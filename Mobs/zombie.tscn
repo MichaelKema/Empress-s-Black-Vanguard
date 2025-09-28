@@ -9,12 +9,12 @@ radius = 11.87
 [node name="Zombie" type="CharacterBody2D"]
 script = ExtResource("1_q5ivc")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(1.1920929e-07, -1.4210855e-14)
-scale = Vector2(0.99999994, 0.99999994)
-shape = SubResource("CircleShape2D_q5ivc")
-
 [node name="Skeleton" type="Sprite2D" parent="."]
 position = Vector2(2, -2.3841858e-07)
 scale = Vector2(0.609375, 0.59375)
 texture = ExtResource("1_30qow")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1.1920929e-07, -1.4210855e-14)
+scale = Vector2(0.99999994, 0.99999994)
+shape = SubResource("CircleShape2D_q5ivc")
