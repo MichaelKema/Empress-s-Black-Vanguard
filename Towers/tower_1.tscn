@@ -1,16 +1,18 @@
-[gd_scene load_steps=5 format=3 uid="uid://bqmwtv1xjqm8d"]
+[gd_scene load_steps=6 format=3 uid="uid://bqmwtv1xjqm8d"]
 
 [ext_resource type="Script" uid="uid://d6ur70638jlr" path="res://Towers/tower_1.gd" id="1_4s503"]
+[ext_resource type="PackedScene" uid="uid://bfjpjfw32hp26" path="res://Towers/projectile1.tscn" id="2_5lj02"]
 [ext_resource type="Texture2D" uid="uid://b5l3xh7dtsx65" path="res://Placeholders/Circle/Circle-0005.png" id="2_jwd12"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_exkkt"]
 radius = 16.0
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_yhw58"]
-radius = 128.0
+[sub_resource type="CircleShape2D" id="CircleShape2D_5lj02"]
+radius = 11.228534
 
 [node name="Tower1" type="StaticBody2D"]
 script = ExtResource("1_4s503")
+projectile_scene = ExtResource("2_5lj02")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_exkkt")
@@ -24,9 +26,12 @@ texture = ExtResource("2_jwd12")
 [node name="Tower" type="Area2D" parent="."]
 position = Vector2(-3, 44)
 
-[node name="TowerRange" type="CollisionShape2D" parent="Tower"]
+[node name="TowerRange" type="Area2D" parent="Tower"]
 position = Vector2(3, -44)
-shape = SubResource("CircleShape2D_yhw58")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Tower/TowerRange"]
+scale = Vector2(10, 10)
+shape = SubResource("CircleShape2D_5lj02")
 
 [node name="BulletContainer" type="Node" parent="."]
 

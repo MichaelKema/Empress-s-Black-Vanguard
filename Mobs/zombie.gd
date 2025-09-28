@@ -4,7 +4,24 @@ extends CharacterBody2D
 # Called when the node enters the scene tree for the first time.
 
 
+@export var max_hp: int = 20
+var hp: int
 
+@onready var health_bar = $HealthBar
+
+func _ready():
+    hp = max_hp
+    health_bar.max_value = max_hp
+    health_bar.value = max_hp
+
+func take_damage(amount: int):
+    hp -= amount
+    health_bar.value = hp  # update bar
+    if hp <= 0:
+        die()
+
+func die():
+    queue_free()
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	get_parent().set_progress(get_parent().get_progress() + speed*delta)
+    get_parent().set_progress(get_parent().get_progress() + speed*delta)
