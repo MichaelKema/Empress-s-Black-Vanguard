@@ -1,8 +1,13 @@
-[gd_scene load_steps=8 format=4 uid="uid://bfbrq0vnxhlvx"]
+[gd_scene load_steps=12 format=4 uid="uid://cfjph1s14seke"]
 
+[ext_resource type="Texture2D" uid="uid://3l8my7tm5d6h" path="res://Ground_rocks.png" id="1_1bvp3"]
+[ext_resource type="Texture2D" uid="uid://7jsweqowlkf4" path="res://Objects.png" id="2_lquwl"]
+[ext_resource type="Texture2D" uid="uid://c2aehbht1k7sv" path="res://walls_floor.png" id="3_7mycd"]
+[ext_resource type="Texture2D" uid="uid://r10yv2n1v7yf" path="res://Skeleton.png" id="4_272bh"]
 [ext_resource type="PackedScene" uid="uid://dycs4ge40wdgf" path="res://Mobs/zombie.tscn" id="5_lquwl"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5vw27"]
+texture = ExtResource("1_1bvp3")
 1:0/0 = 0
 2:0/0 = 0
 3:0/0 = 0
@@ -1094,6 +1099,7 @@
 9:85/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kek77"]
+texture = ExtResource("2_lquwl")
 1:1/0 = 0
 2:1/0 = 0
 3:1/0 = 0
@@ -3034,6 +3040,7 @@
 60:46/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4c57u"]
+texture = ExtResource("3_7mycd")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -3316,6 +3323,7 @@
 12:22/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_efxa6"]
+texture = ExtResource("4_272bh")
 
 [sub_resource type="TileSet" id="TileSet_dg77c"]
 sources/0 = SubResource("TileSetAtlasSource_5vw27")
@@ -3344,14 +3352,3 @@ curve = SubResource("Curve2D_7mycd")
 position = Vector2(7, 0)
 
 [node name="PathSpawner" type="Node2D" parent="."]
-
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(316, 23)
-zoom = Vector2(1.6, 1.6)
-
-[node name="ColorRect" type="ColorRect" parent="."]
-offset_left = -37.0
-offset_top = 22.0
-offset_right = 679.0
-offset_bottom = 224.0
-color = Color(0.42365062, 0.42365065, 0.42365062, 1)
