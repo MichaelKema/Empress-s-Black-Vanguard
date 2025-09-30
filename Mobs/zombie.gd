@@ -1,6 +1,7 @@
 extends CharacterBody2D
 
 @export var speed=100
+@export var coin_reward: int = 5
 # Called when the node enters the scene tree for the first time.
 
 
@@ -21,6 +22,10 @@ func take_damage(amount: int):
         die()
 
 func die():
+    # simplest: hit the Wallet node in the current scene
+    var wallet = get_tree().current_scene.get_node_or_null("Wallet")
+    if wallet:
+        wallet.add(coin_reward)
     queue_free()
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):

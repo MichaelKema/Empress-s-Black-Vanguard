@@ -3667,7 +3667,8 @@ script = ExtResource("5_272bh")
 
 [node name="BuildBtn" type="Button" parent="UI/TopBar"]
 layout_mode = 0
-offset_right = 8.0
+offset_left = 128.0
+offset_right = 136.0
 offset_bottom = 8.0
 theme_override_colors/icon_normal_color = Color(0.3779569, 0.17960522, 0.7655359, 1)
 script = ExtResource("6_5vw27")

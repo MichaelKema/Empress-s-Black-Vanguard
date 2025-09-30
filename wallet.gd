@@ -6,3 +6,4 @@ func add(v:int): coins += v; coins_changed.emit(coins)
 func spend(v:int) -> bool:
     if coins >= v: coins -= v; coins_changed.emit(coins); return true
     return false
+
