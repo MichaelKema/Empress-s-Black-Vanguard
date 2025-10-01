@@ -1,9 +1,10 @@
-[gd_scene load_steps=16 format=4 uid="uid://bfbrq0vnxhlvx"]
+[gd_scene load_steps=17 format=4 uid="uid://bfbrq0vnxhlvx"]
 
 [ext_resource type="Texture2D" uid="uid://c2aehbht1k7sv" path="res://Maps and Tiles/walls_floor.png" id="1_0xm2m"]
 [ext_resource type="Texture2D" uid="uid://5klfhgcyeyt4" path="res://Placeholders/Diamond/Sprite-0007.png" id="2_h2yge"]
 [ext_resource type="Script" uid="uid://bq2h6jknslnju" path="res://path_spawner.gd" id="3_h2yge"]
 [ext_resource type="PackedScene" uid="uid://bqmwtv1xjqm8d" path="res://Towers/tower_1.tscn" id="4_1bvp3"]
+[ext_resource type="Script" uid="uid://06nubva5i3s8" path="res://ui.gd" id="5_5vw27"]
 [ext_resource type="Script" uid="uid://d277rvx0fwej4" path="res://top_bar.gd" id="5_272bh"]
 [ext_resource type="Script" uid="uid://cekxo1id43j7" path="res://build_btn.gd" id="6_5vw27"]
 [ext_resource type="Script" uid="uid://cujkf1brvapiw" path="res://wallet.gd" id="7_kek77"]
@@ -3657,6 +3658,7 @@ position = Vector2(669, 1)
 [node name="Tower1" parent="EndMarker" instance=ExtResource("4_1bvp3")]
 
 [node name="UI" type="CanvasLayer" parent="."]
+script = ExtResource("5_5vw27")
 
 [node name="TopBar" type="Control" parent="UI"]
 layout_mode = 3
